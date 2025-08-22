@@ -21,7 +21,7 @@ public static class ProcessOrderFunction
         logger.LogInformation("Starting order processing orchestration.");
 
         var order = context.GetInput<Order>();
-        
+
         try
         {
             // Step 1: Validate order
@@ -54,7 +54,7 @@ public static class ProcessOrderFunction
     {
         ILogger logger = executionContext.GetLogger("ValidateOrderActivity");
         logger.LogInformation("Validating order {orderId}.", order.Id);
-        
+
         return order.IsValid(out var errors);
     }
 
@@ -63,11 +63,11 @@ public static class ProcessOrderFunction
     {
         ILogger logger = executionContext.GetLogger("SaveOrderActivity");
         logger.LogInformation("Saving order {orderId}.", order.Id);
-        
+
         // Note: In a real implementation, you'd inject dependencies here
         // For now, this is a placeholder that would need dependency injection setup
         logger.LogInformation("Order {orderId} would be saved to database.", order.Id);
-        
+
         return Task.CompletedTask;
     }
 
@@ -76,11 +76,11 @@ public static class ProcessOrderFunction
     {
         ILogger logger = executionContext.GetLogger("NotifyOrderActivity");
         logger.LogInformation("Sending notification for order {orderId}.", order.Id);
-        
+
         // Note: In a real implementation, you'd inject dependencies here
         // For now, this is a placeholder that would need dependency injection setup
         logger.LogInformation("Notification sent for order {orderId}.", order.Id);
-        
+
         return Task.CompletedTask;
     }
 
