@@ -5,7 +5,7 @@ using Azure;
 using Orders.Functions.Models;
 
 
-namespace OrderFunctions.Services
+namespace Orders.Functions.Services
 {
     public class OrderNotificationService
     {
