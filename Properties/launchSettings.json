@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "order_functions": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7240",
+      "launchBrowser": false
+    }
+  }
+}
