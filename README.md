@@ -18,11 +18,11 @@ The solution uses Azure Durable Functions to orchestrate order processing throug
 
 Represents an order with the following properties:
 
-- `Id` (Guid) - Unique order identifier
-- `CustomerName` (string) - Name of the customer
-- `Items` (List<OrderItem>) - List of items in the order
-- `TotalAmount` (decimal) - Total amount of the order
-- `CreatedAt` (DateTime) - When the order was created
+- `Id` (`Guid`) - Unique order identifier
+- `CustomerName` (`string`) - Name of the customer
+- `Items` (`List<OrderItem>`) - List of items in the order
+- `TotalAmount` (`decimal`) - Total amount of the order
+- `CreatedAt` (`DateTime`) - When the order was created
 
 #### `OrderItem`
 
